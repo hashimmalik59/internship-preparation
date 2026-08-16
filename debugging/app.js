@@ -39,3 +39,16 @@
 // 2. return nahi lagaya hua hai kyun k brackets hain
 // 3. { name: "Ali", age: 20 }, { name: "Hashim", age: 25 },
 // 4. new array
+
+// function calculateTotal(price, quantity) {
+//   const total = price * quantity;
+// }
+
+// const result = calculateTotal(500, 3);
+
+// console.log(result);
+
+// 1. Logic error
+// 2. undefined
+// 3. nahi, kyun k total ko return nahi kiya
+// 4. kyun k return nahi kiya total ko
