@@ -52,3 +52,25 @@
 // 2. undefined
 // 3. nahi, kyun k total ko return nahi kiya
 // 4. kyun k return nahi kiya total ko
+
+// const user = {
+//   name: "Hashim",
+//   address: {
+//     city: "Peshawar",
+//   },
+// };
+
+// console.log(user.profile.city);
+
+// 1. Logic error
+// 2. undefined
+// 3. error de raha hai k progfile to hai nahi aur profile se city ko access kar rahe hain
+// 4. kyun k hum address ki jagah pe profile ko le rahe hain jo hai hi nahi
+
+// user.profile
+//    ↓
+// undefined
+//    ↓
+// undefined.city
+//    ↓
+// 💥 TypeError
