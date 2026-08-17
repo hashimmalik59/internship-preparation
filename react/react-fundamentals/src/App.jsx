@@ -1,6 +1,8 @@
 // import { useState } from "react";
 
-import Challenge1 from "./challenges/01-challenge";
+// import Challenge1 from "./challenges/01-challenge";
+import { use, useState } from "react";
+import Challenge2 from "./challenges/02-challenge";
 
 // const App = () => {
 //   const [count, setCount] = useState(0);
@@ -39,9 +41,21 @@ import Challenge1 from "./challenges/01-challenge";
 // }
 
 const App = () => {
+  const [name, setName] = useState("Hashim");
+  const [age, setAge] = useState(24);
+  function changeName() {
+    setName("Ali");
+  }
+  function handleBirthday() {
+    if (age < 25) setAge(age + 1);
+  }
+
   return (
     <div>
-      <Challenge1 />
+      {/* <Challenge1 /> */}
+      <Challenge2 username={name} userAge={age} />
+      <button onClick={changeName}>Change name</button>
+      <button onClick={handleBirthday}>Birthday</button>
     </div>
   );
 };
