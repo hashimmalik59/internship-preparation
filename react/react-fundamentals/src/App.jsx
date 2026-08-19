@@ -1,8 +1,10 @@
 // import { useState } from "react";
 // import LikeButton from "./challenges/LikeButton";
 // import LikeDisplay from "./challenges/LikeDisplay";
-import ConditionalRendering from "./challenges/ConditionalRendering";
-import ImageObject from "./challenges/ImageObject";
+// import ConditionalRendering from "./challenges/ConditionalRendering";
+// import ImageObject from "./challenges/ImageObject";
+
+import ListRendering from "./challenges/ListRendering";
 
 const App = () => {
   // const [like, setLike] = useState(0);
@@ -14,7 +16,8 @@ const App = () => {
       {/* <ImageObject />
       <LikeButton onLike={handleLike} />
       <LikeDisplay displayLike={like} /> */}
-      <ConditionalRendering />
+      {/* <ConditionalRendering /> */}
+      <ListRendering />
     </div>
   );
 };
