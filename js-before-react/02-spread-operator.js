@@ -31,3 +31,13 @@
 // console.log(Math.max(...scoresList));
 // Task:
 // JavaScript ka built-in function Math.max() use kar. Lekin scoresList array ko seedha pass mat karna, balkay spread operator (...) ka use kar ke array ki values ko alag-alag arguments ke tor par pass karna taake highest score nikal aaye. Phir result ko print kar.
+
+// const originalArray = [1, 2, 3];
+
+// const copyArray = [...originalArray];
+
+// console.log(originalArray);
+// console.log(copyArray);
+
+// Task:
+// Spread operator ka use kar ke originalArray ki ek exact copy bana jiska naam copyArray ho. Phir dono ko print kar ke dekh.
