@@ -8,3 +8,15 @@
 // console.log(firstNum);
 // console.log(secondNum);
 // console.log(otherNums);
+
+// Micro-Task: Rest Parameter in Functions
+// Task:
+// Ek function bana (chahe regular ya arrow function) jiska naam collectArgs ho. Yeh function rest operator (...) ka use kare taake hum isko jitne marzi numbers pass karein, woh sab ek array ke andar pack ho jayein. Phir function us array ko console log kare.
+
+// Misal ke tor par:
+// collectArgs(1, 2, 3, 4, 5); call karne par output [1, 2, 3, 4, 5] aana chahiye.
+
+// function collectArgs(...allArrNums) {
+//   console.log(allArrNums);
+// }
+// collectArgs(1, 2, 3, 4, 5);
