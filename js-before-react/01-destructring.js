@@ -12,9 +12,19 @@
 
 // console.log(firstColor, thirdColor); // Expected output: Red Blue
 
-const scores = [90, 80];
+// const scores = [90, 80];
 
 // Yahan destructuring kar ke teesri value ke liye default value set kar:
-const [math = 90, english = 80, science = 50] = scores;
+// const [math = 90, english = 80, science = 50] = scores;
 
-console.log(math, english, science); // Expected output: 90 80 50
+// console.log(math, english, science); // Expected output: 90 80 50
+
+const user = { username: "Ali", age: 25, profession: "Developer" };
+// Task:
+// Object destructuring use kar ke username aur profession variables alag nikal, aur unhein console par print kar.
+
+const { username, profession } = user;
+
+console.log(user);
+
+console.log(username, profession);
