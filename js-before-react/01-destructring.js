@@ -38,3 +38,12 @@
 // console.log(student);
 
 // console.log(studentName);
+
+const settings = { theme: "dark" };
+// Task:
+// Object destructuring use kar ke theme aur notifications variables nikal. notifications property object mein maujood nahi hai, isliye uske liye default value true set kar. Phir dono ko print kar.
+
+const { theme, notification = true } = settings;
+
+console.log(settings);
+console.log(theme, notification);
