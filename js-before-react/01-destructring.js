@@ -61,3 +61,19 @@
 // } = person;
 
 // console.log(city, country);
+
+// const employee = {
+//   id: 1,
+//   details: {
+//     department: "Engineering",
+//     location: "Islamabad",
+//   },
+// };
+
+// // Task: Nested destructuring use kar ke 'department' aur 'location' nikal.
+
+// const {
+//   details: { department, location: place },
+// } = employee;
+
+// console.log(department, place);
