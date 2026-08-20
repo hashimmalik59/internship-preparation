@@ -19,12 +19,22 @@
 
 // console.log(math, english, science); // Expected output: 90 80 50
 
-const user = { username: "Ali", age: 25, profession: "Developer" };
+// const user = { username: "Ali", age: 25, profession: "Developer" };
 // Task:
 // Object destructuring use kar ke username aur profession variables alag nikal, aur unhein console par print kar.
 
-const { username, profession } = user;
+// const { username, profession } = user;
 
-console.log(user);
+// console.log(user);
 
-console.log(username, profession);
+// console.log(username, profession);
+
+// const student = { id: 101, name: "Ahmed", marks: 85 };
+// Task:
+// Object destructuring use kar ke name property ko destructure kar, lekin uska naam change kar ke studentName rakh, aur phir usay print kar.
+
+// const { name: studentName } = student;
+
+// console.log(student);
+
+// console.log(studentName);
