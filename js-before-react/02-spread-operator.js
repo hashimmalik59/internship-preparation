@@ -17,3 +17,12 @@
 // console.log(groupA);
 // console.log(groupB);
 // console.log(allMembers);
+
+const user = { name: "Ali", age: 25, role: "Developer" };
+// Task:
+// Spread operator (...) ka use kar ke ek naya object updatedUser bana. Is naye object mein user ki saari properties honi chahiye, lekin sath mein age ki value update ho kar 26 aur ek nayi property city: "Lahore" bhi add honi chahiye. Phir updatedUser ko print kar.
+
+const updatedUser = { ...user, age: 26, city: "Peshawar" };
+
+console.log(user);
+console.log(updatedUser);
