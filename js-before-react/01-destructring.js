@@ -78,13 +78,13 @@
 
 // console.log(department, place);
 
-const laptop = { brand: "Dell", ram: "16GB", ssd: "512GB", processor: "i7" };
+// const laptop = { brand: "Dell", ram: "16GB", ssd: "512GB", processor: "i7" };
 
 // Task: 'brand' variable alag nikal, aur baqi saari properties ko 'specs' naam ke variable mein pack kar.
 
-const { brand, ...restSpec } = laptop;
+// const { brand, ...restSpec } = laptop;
 
-console.log(laptop);
+// console.log(laptop);
 
-console.log(brand);
-console.log(restSpec);
+// console.log(brand);
+// console.log(restSpec);
