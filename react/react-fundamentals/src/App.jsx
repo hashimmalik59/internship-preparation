@@ -1,28 +1,25 @@
 import { useEffect, useState } from "react";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  const [like, setLike] = useState(0);
+  const [users, setUsers] = useState([]);
   useEffect(() => {
-    document.title = `My page ${count}`;
-    console.log("hello");
-  }, [count, like]);
+    async function fetchUser() {
+      const res = await fetch("https://dummyjson.com/users");
+      const data = await res.json();
+      console.log(data);
+      setUsers(data.users);
+    }
+    fetchUser();
+  }, []);
+
   return (
     <div>
-      <h1>Hello React</h1>
-      <button
-        onClick={() => setCount(count + 1)}
-        className="bg-green-600 text-white"
-      >
-        Count: {count}
-      </button>
-      <br />
-      <button
-        onClick={() => setLike(like + 1)}
-        className="bg-green-600 text-white"
-      >
-        Like: {like}
-      </button>
+      <h1>useEffect API call</h1>
+      <ul className="flex flex-wrap">
+        {users.map((user) => (
+          <li key={user.id}> {user.firstName} |</li>
+        ))}
+      </ul>
     </div>
   );
 };
