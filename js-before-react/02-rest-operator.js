@@ -20,3 +20,22 @@
 //   console.log(allArrNums);
 // }
 // collectArgs(1, 2, 3, 4, 5);
+
+// Micro-Task: Rest Parameter with Regular Parameters
+// Task:
+// Ek function banao jiska naam summarizeScores ho.
+
+// Yeh function pehla argument ek string (studentName) le.
+
+// Baqi saari values ko rest parameter (...scores) ke zariye ek array mein pack kare.
+
+// Function console log kare: Name aur uske scores ka array.
+
+// Misal ke tor par:
+// summarizeScores("Ali", 80, 85, 90);
+// Output aana chahiye: Ali [80, 85, 90]
+
+// function summarizeScores(studentName, ...scores) {
+//   console.log(studentName, scores);
+// }
+// summarizeScores("Hashim", 90, 96, 99, 92);
