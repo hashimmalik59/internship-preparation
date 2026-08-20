@@ -18,11 +18,16 @@
 // console.log(groupB);
 // console.log(allMembers);
 
-const user = { name: "Ali", age: 25, role: "Developer" };
+// const user = { name: "Ali", age: 25, role: "Developer" };
 // Task:
 // Spread operator (...) ka use kar ke ek naya object updatedUser bana. Is naye object mein user ki saari properties honi chahiye, lekin sath mein age ki value update ho kar 26 aur ek nayi property city: "Lahore" bhi add honi chahiye. Phir updatedUser ko print kar.
 
-const updatedUser = { ...user, age: 26, city: "Peshawar" };
+// const updatedUser = { ...user, age: 26, city: "Peshawar" };
 
-console.log(user);
-console.log(updatedUser);
+// console.log(user);
+// console.log(updatedUser);
+
+// const scoresList = [45, 89, 23, 78, 92];
+// console.log(Math.max(...scoresList));
+// Task:
+// JavaScript ka built-in function Math.max() use kar. Lekin scoresList array ko seedha pass mat karna, balkay spread operator (...) ka use kar ke array ki values ko alag-alag arguments ke tor par pass karna taake highest score nikal aaye. Phir result ko print kar.
