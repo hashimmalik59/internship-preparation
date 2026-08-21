@@ -1,9 +1,8 @@
-import MutableStorage from "./useRef-practice/MutableStorage";
-
+import ScrollUseRef from "./useRef-practice/ScrollUserRef";
 const App = () => {
   return (
     <div>
-      <MutableStorage />
+      <ScrollUseRef />
     </div>
   );
 };
