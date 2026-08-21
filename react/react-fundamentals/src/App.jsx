@@ -1,9 +1,9 @@
-import UseRef from "./useRef-practice/inputUX";
+import MutableStorage from "./useRef-practice/MutableStorage";
 
 const App = () => {
   return (
     <div>
-      <UseRef />
+      <MutableStorage />
     </div>
   );
 };
