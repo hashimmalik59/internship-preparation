@@ -35,3 +35,43 @@ const UseRef = () => {
 };
 
 export default UseRef;
+
+// import { useRef } from "react";
+
+// const VideoPlayer = () => {
+//   const videoRef = useRef(null);
+
+//   const handlePlay = () => {
+//     videoRef.current.play(); // Direct DOM method call kiya
+//   };
+
+//   const handlePause = () => {
+//     videoRef.current.pause(); // Direct DOM method call kiya
+//   };
+
+//   return (
+//     <div className="p-4 border m-4">
+//       <video
+//         ref={videoRef}
+//         width="300"
+//         src="https://www.w3schools.com/html/mov_bbb.mp4"
+//       />
+//       <div className="mt-2 flex gap-2">
+//         <button
+//           onClick={handlePlay}
+//           className="bg-green-600 text-white px-3 py-1 rounded"
+//         >
+//           Play
+//         </button>
+//         <button
+//           onClick={handlePause}
+//           className="bg-red-600 text-white px-3 py-1 rounded"
+//         >
+//           Pause
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default VideoPlayer;
