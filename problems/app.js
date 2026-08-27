@@ -23,3 +23,17 @@ function positiveLength(arr) {
 // console.log(positiveLength([1, 2, 3]));
 // console.log(positiveLength([0, 0, 0]));
 // console.log(positiveLength([-1, 0, 5]));
+
+function findMaxNum(arr) {
+  let maxNum = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (maxNum < arr[i]) maxNum = arr[i];
+  }
+  return maxNum;
+}
+// console.log(findMaxNum([12, 4, 19, 7, 15]));
+// console.log(findMaxNum([]));
+// console.log(findMaxNum([7]));
+// console.log(findMaxNum([-5, -2, -10]));
+// console.log(findMaxNum([5, 5, 5]));
+// console.log(findMaxNum([-10, -3, -20, -1]));
