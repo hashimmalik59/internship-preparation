@@ -37,3 +37,17 @@ function findMaxNum(arr) {
 // console.log(findMaxNum([-5, -2, -10]));
 // console.log(findMaxNum([5, 5, 5]));
 // console.log(findMaxNum([-10, -3, -20, -1]));
+
+function findMinNum(arr) {
+  let minNum = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (minNum > arr[i]) minNum = arr[i];
+  }
+  return minNum;
+}
+// console.log(findMinNum([12, 4, 19, 7, 15]));
+// console.log(findMinNum([]));
+// console.log(findMinNum([7]));
+// console.log(findMinNum([-5, -2, -10]));
+// console.log(findMinNum([5, 5, 5]));
+// console.log(findMinNum([-10, -3, -20, -1]));
