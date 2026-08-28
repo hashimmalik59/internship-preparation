@@ -69,3 +69,10 @@ function countGreater10Num(arr) {
   return count;
 }
 // console.log(countGreater10Num([5, 12, 8, 20, 3, 15, 10]));
+
+function findFirstEvenNumber(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) return arr[i];
+  }
+}
+console.log(findFirstEvenNumber([7, 9, 11, 14, 20, 3]));
