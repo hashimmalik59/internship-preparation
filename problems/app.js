@@ -60,3 +60,12 @@ function sumAllPositiveNums(arr) {
   return countPositiveNum;
 }
 // console.log(sumAllPositiveNums([-5, 10, -2, 7, 3, -8]));
+
+function countGreater10Num(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10) count++;
+  }
+  return count;
+}
+// console.log(countGreater10Num([5, 12, 8, 20, 3, 15, 10]));
