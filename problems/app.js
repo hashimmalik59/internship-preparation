@@ -51,3 +51,12 @@ function findMinNum(arr) {
 // console.log(findMinNum([-5, -2, -10]));
 // console.log(findMinNum([5, 5, 5]));
 // console.log(findMinNum([-10, -3, -20, -1]));
+
+function sumAllPositiveNums(arr) {
+  let countPositiveNum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) countPositiveNum += arr[i];
+  }
+  return countPositiveNum;
+}
+// console.log(sumAllPositiveNums([-5, 10, -2, 7, 3, -8]));
