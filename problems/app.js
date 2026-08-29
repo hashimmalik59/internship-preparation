@@ -75,4 +75,17 @@ function findFirstEvenNumber(arr) {
     if (arr[i] % 2 === 0) return arr[i];
   }
 }
-console.log(findFirstEvenNumber([7, 9, 11, 14, 20, 3]));
+// console.log(findFirstEvenNumber([7, 9, 11, 14, 20, 3]));
+
+function findFirstPositiveNum(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) return arr[i];
+  }
+}
+console.log(findFirstPositiveNum([-5, -2, -8, 0, 7, 3]));
+
+// -5 > 0 => false
+// -2 > 0 => false
+// -8 > 0 => false
+// 0 > 0 => false
+// 7 > 0 => true(function terminates here)
