@@ -82,10 +82,22 @@ function findFirstPositiveNum(arr) {
     if (arr[i] > 0) return arr[i];
   }
 }
-console.log(findFirstPositiveNum([-5, -2, -8, 0, 7, 3]));
+// console.log(findFirstPositiveNum([-5, -2, -8, 0, 7, 3]));
 
 // -5 > 0 => false
 // -2 > 0 => false
 // -8 > 0 => false
 // 0 > 0 => false
 // 7 > 0 => true(function terminates here)
+
+function findFirstNegativeNumber(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) return arr[i];
+  }
+}
+console.log(findFirstNegativeNumber([4, 8, 3, -6, 10, -2]));
+
+// 4 < 0 = false
+// 8 < 0 = false
+// 3 < 0 = false
+// -6 < 0 = true(function terminate)
