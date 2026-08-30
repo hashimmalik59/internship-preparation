@@ -138,11 +138,11 @@ function countOccurrences(arr, target) {
   }
   return count;
 }
-console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 2));
-console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 9));
-console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], []));
-console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 0));
-console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 1));
+// console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 2));
+// console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 9));
+// console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], []));
+// console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 0));
+// console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 1));
 
 // 2 === 2 => true => count(0) + 1 = 1
 // 5 === 2 => false => count(1) = 1
@@ -151,3 +151,29 @@ console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 1));
 // 2 === 2 => true => count(2) + 1 = 3
 // 7 === 2 => false => count(3) = 3
 // 5 === 2 => false => count(3) = 3
+
+// input: array of numbers
+// output: single number(4)
+// psuedocode:
+// * function takes 2 inputs which is array and targeted number
+// * lastIndex variable for getting last index
+// * index variable which is 0
+// * iterate each array element
+// * if array current element equal to targeted number(2)
+// * than return the current index
+
+function lastOccurrence(arr, targetNum) {
+  let lastIndex = -1;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === targetNum) lastIndex = i;
+  }
+  return lastIndex;
+}
+console.log(lastOccurrence([2, 5, 2, 8, 2, 7, 5], 9));
+console.log(lastOccurrence([], 2));
+console.log(lastOccurrence([5], 5));
+console.log(lastOccurrence([5], 2));
+console.log(lastOccurrence([2, 2, 2], 2));
+console.log(lastOccurrence([1, 2, 3, 2, 4], 2));
+console.log(lastOccurrence([1, 3, 5], 2));
+// -1(target not found)
