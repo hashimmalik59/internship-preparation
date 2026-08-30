@@ -95,9 +95,28 @@ function findFirstNegativeNumber(arr) {
     if (arr[i] < 0) return arr[i];
   }
 }
-console.log(findFirstNegativeNumber([4, 8, 3, -6, 10, -2]));
+// console.log(findFirstNegativeNumber([4, 8, 3, -6, 10, -2]));
 
 // 4 < 0 = false
 // 8 < 0 = false
 // 3 < 0 = false
 // -6 < 0 = true(function terminate)
+
+// input: array of numbers
+// output: single number 2
+// psuedocode:
+// - function takes an input which is array
+// - iterate each array element
+// - if array current number is equal to 12
+// - than return its index
+
+function returnTargetedNumIndex(arr, targetedNum) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === targetedNum) return i;
+  }
+}
+console.log(returnTargetedNumIndex([4, 7, 12, 9, 15], 12));
+
+// 4 === 12 = false
+// 7 === 12 = false
+// 12 === 12 = true(terminates here)
