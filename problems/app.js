@@ -115,8 +115,39 @@ function returnTargetedNumIndex(arr, targetedNum) {
     if (arr[i] === targetedNum) return i;
   }
 }
-console.log(returnTargetedNumIndex([4, 7, 12, 9, 15], 12));
+// console.log(returnTargetedNumIndex([4, 7, 12, 9, 15], 12));
 
 // 4 === 12 = false
 // 7 === 12 = false
 // 12 === 12 = true(terminates here)
+
+// input: array of numbers
+// output: single number(3)
+// psuedocode:
+// * function takes 2 inputs which is array, and targeted number
+// * count variable for duplicate num(0)
+// * iterate each array element
+// * if array current element equal to 2
+// * than count + 1 and update count
+// return count
+
+function countOccurrences(arr, target) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) count++;
+  }
+  return count;
+}
+console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 2));
+console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 9));
+console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], []));
+console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 0));
+console.log(countOccurrences([2, 5, 2, 8, 2, 7, 5], 1));
+
+// 2 === 2 => true => count(0) + 1 = 1
+// 5 === 2 => false => count(1) = 1
+// 2 === 2 => true => count(1) + 1 = 2
+// 8 === 2 => false => count(2) = 2
+// 2 === 2 => true => count(2) + 1 = 3
+// 7 === 2 => false => count(3) = 3
+// 5 === 2 => false => count(3) = 3
