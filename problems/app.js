@@ -206,4 +206,35 @@ function minimumPositiveNumber(arr) {
   }
   return minNum;
 }
-console.log(minimumPositiveNumber([-5, 8, 3, -2, 10, 1, -7]));
+// console.log(minimumPositiveNumber([-5, 8, 3, -2, 10, 1, -7]));
+
+// input: array of numbers
+// output: single number(20)
+// psuedocode:
+// * function takes an input which is array
+// * create varible sum(0)
+// * iterate each array element
+// * if array current element completely divided by 2
+// * than sum + 1
+// * return sum
+
+// dryrun
+// 3 % 2 === 0 => false => count(0)
+// 8 % 2 === 0 => true => count(0) + 1 = 1
+// 11 % 2 === 0 => false => count(1)
+// 4 % 2 === 0 => true => count(1) + 1 = 2
+// 6 % 2 === 0 => true => count(2) + 1 = 3
+// 9 % 2 === 0 => false => count(3)
+// 2 % 2 === 0 => true => count(3) + 1 = 4
+
+function sumAllEvenNums(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) sum += arr[i];
+  }
+  return sum;
+}
+console.log(sumAllEvenNums([3, 8, 11, 4, 6, 9, 2]));
+// console.log(sumAllEvenNums([]));
+// console.log(sumAllEvenNums([null, undefined, 4]));
+// console.log(sumAllEvenNums([-1, false, 5, true, 0]));
