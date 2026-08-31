@@ -169,11 +169,41 @@ function lastOccurrence(arr, targetNum) {
   }
   return lastIndex;
 }
-console.log(lastOccurrence([2, 5, 2, 8, 2, 7, 5], 9));
-console.log(lastOccurrence([], 2));
-console.log(lastOccurrence([5], 5));
-console.log(lastOccurrence([5], 2));
-console.log(lastOccurrence([2, 2, 2], 2));
-console.log(lastOccurrence([1, 2, 3, 2, 4], 2));
-console.log(lastOccurrence([1, 3, 5], 2));
+// console.log(lastOccurrence([2, 5, 2, 8, 2, 7, 5], 9));
+// console.log(lastOccurrence([], 2));
+// console.log(lastOccurrence([5], 5));
+// console.log(lastOccurrence([5], 2));
+// console.log(lastOccurrence([2, 2, 2], 2));
+// console.log(lastOccurrence([1, 2, 3, 2, 4], 2));
+// console.log(lastOccurrence([1, 3, 5], 2));
 // -1(target not found)
+
+// input: array of numbers
+// output: single number(1)
+// psuedocode:
+// * function takes an input which is array
+// * array for pushing positive array numbers
+// * minNum variable
+// * iterate array each element
+// * if array current element is greater than 0
+// * push into positive array
+// * iterate positive array
+// * if minNum is greater than positive array current element
+// * than update minNum
+// * return minNum
+
+function minimumPositiveNumber(arr) {
+  let positiveArr = [];
+  let minNum;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      positiveArr.push(arr[i]);
+      minNum = positiveArr[0];
+      for (let i = 0; i < positiveArr.length; i++) {
+        if (minNum > positiveArr[i]) minNum = positiveArr[i];
+      }
+    }
+  }
+  return minNum;
+}
+console.log(minimumPositiveNumber([-5, 8, 3, -2, 10, 1, -7]));
