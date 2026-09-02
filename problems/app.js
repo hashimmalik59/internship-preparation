@@ -234,7 +234,42 @@ function sumAllEvenNums(arr) {
   }
   return sum;
 }
-console.log(sumAllEvenNums([3, 8, 11, 4, 6, 9, 2]));
+// console.log(sumAllEvenNums([3, 8, 11, 4, 6, 9, 2]));
 // console.log(sumAllEvenNums([]));
 // console.log(sumAllEvenNums([null, undefined, 4]));
 // console.log(sumAllEvenNums([-1, false, 5, true, 0]));
+
+// input: array of numbers
+// output: single number(3)
+// psuedocode:
+// - function takes an input which is array
+// - a variable for count numbers(0)
+// - iterate each array number
+// - if number is greater than 5 and less than 15
+// - than count + 1 and update count
+// - return count
+
+// dryrun:
+// - 3 > 5 && 3 < 15 => false => count(0)
+// - 7 > 5 && 7 < 15 => true => count(0) + 1
+// - 12 > 5 && 12 < 15 => true => count(1) + 1
+// - 18 > 5 && 18 < 15 => false => count(2)
+// - 5 > 5 && 5 < 15 => false => count(2)
+// - 15 > 5 && 15 < 15 => false => count(2)
+// - 9 > 5 && 9 < 15 => true => count(2) + 1
+// - 20 > 5 && 20 < 5 => false => count(3)
+
+function numsBetween5And15(arr) {
+  let num = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 5 && arr[i] < 15) num++;
+  }
+  return num;
+}
+console.log(numsBetween5And15([3, 7, 12, 18, 5, 15, 9, 20]));
+// edgecases
+// console.log(numsBetween5And15([])); // 0
+// console.log(numsBetween5And15([5, 15])); // 0
+// console.log(numsBetween5And15([6, 14])); // 2
+// console.log(numsBetween5And15(4, 16, 5, 15)); // 0
+// console.log(numsBetween5And15([10, 10, 10])); // 3
