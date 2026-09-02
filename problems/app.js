@@ -266,10 +266,38 @@ function numsBetween5And15(arr) {
   }
   return num;
 }
-console.log(numsBetween5And15([3, 7, 12, 18, 5, 15, 9, 20]));
+// console.log(numsBetween5And15([3, 7, 12, 18, 5, 15, 9, 20]));
 // edgecases
 // console.log(numsBetween5And15([])); // 0
 // console.log(numsBetween5And15([5, 15])); // 0
 // console.log(numsBetween5And15([6, 14])); // 2
 // console.log(numsBetween5And15(4, 16, 5, 15)); // 0
 // console.log(numsBetween5And15([10, 10, 10])); // 3
+
+// input: array of numbers
+// output: single number(4)
+// psuedocode:
+// * function takes an input which is array
+// * variable for count even numbers
+// * iterate each array element
+// * if array current number is greater than 10 and array current number completely divided by 2
+// * than count + 1 and update count
+// * return count
+// dryrun:
+// * 4 > 10 && 4 % 2 => false => count(0)
+// * 12 > 10 && 12 % 2 => true => count(0) + 1
+// * 7 > 10 && 7 % 2 => false => count(1)
+// * 18 > 10 && 18 % 2 => true => count(1) + 1
+// * 20 > 10 && 20 % 2 => true => count(2) + 1
+// * 9 > 10 && 9 % 2 => false => count(3)
+// * 14 > 10 && 14 % 2 => true => count(3) + 1
+// * 3 > 10 && 3 % 2 => false => count(4)
+
+function countEvenGreater10(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10 && arr[i] % 2 === 0) count++;
+  }
+  return count;
+}
+console.log(countEvenGreater10([4, 12, 7, 18, 20, 9, 14, 3]));
