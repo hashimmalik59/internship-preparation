@@ -327,4 +327,35 @@ function countGreaterNum10(arr) {
   }
   return sum;
 }
-console.log(countGreaterNum10([5, 12, 8, 20, 3, 15, 7]));
+// console.log(countGreaterNum10([5, 12, 8, 20, 3, 15, 7]));
+
+// input: array of numbers
+// output: single number(4)
+// psuedocode:
+// - function takes an input which is array
+// - create variable for count(0) nums
+// - iterate each array element
+// - if array current number is less than 10
+// - than count + 1 and update count
+// - return count
+// dryrun:
+// - 12 < 10 => false => count(0)
+// - 5 < 10 => true => count(0) + 1 = 1
+// - 8 < 10 => true => count(1) + 1 = 2
+// - 20 < 10 => false => count(2)
+// - 3 < 10 => true => count(2) + 1 = 3
+// - 15 < 10 => false => count(3)
+// - 7 < 10 => true => count(3) + 1 = 4
+
+function countNumLessThan10(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 10) count++;
+  }
+  return count;
+}
+console.log(countNumLessThan10([12, 5, 8, 20, 3, 15, 7])); // 4
+// edgecase
+console.log(countNumLessThan10([])); // 0
+console.log(countNumLessThan10([10, 12, 17, 25])); // 0
+console.log(countNumLessThan10([3, 6, 1, 8, 9])); // 5
