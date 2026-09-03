@@ -300,4 +300,31 @@ function countEvenGreater10(arr) {
   }
   return count;
 }
-console.log(countEvenGreater10([4, 12, 7, 18, 20, 9, 14, 3]));
+// console.log(countEvenGreater10([4, 12, 7, 18, 20, 9, 14, 3]));
+
+// input: array of numbers
+// output: single number(3)
+// psuedocode:
+// - function takes an input which is array
+// - a variable for count(0) numbers
+// iterate each array element
+// if array current number is greater than 10
+// than count + current array number and update count
+// return count
+// dryrun
+// - 5 > 10 => false => count(0)
+// - 12 > 10 => true => count(0) + 12 => 12
+// - 8 > 10 => false => count(12)
+// - 20 > 10 => true => count(12) + 20 => 32
+// - 3 > 10 => false => count(32)
+// - 15 > 10 => true => count(32) + 15 = 47
+// - 7 > 10 => false => count(47)
+
+function countGreaterNum10(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10) sum += arr[i];
+  }
+  return sum;
+}
+console.log(countGreaterNum10([5, 12, 8, 20, 3, 15, 7]));
