@@ -1,9 +1,9 @@
-import Form from "./form-controlled-inputs/Form";
+import OnSubmit from "./form-controlled-inputs/OnSubmit";
 
 const App = () => {
   return (
     <div>
-      <Form />
+      <OnSubmit />
     </div>
   );
 };
