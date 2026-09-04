@@ -391,3 +391,29 @@ function countPositiveEvenNum(arr) {
 // console.log(countPositiveEvenNum([-2, -5, -1, -9])); // 0
 // console.log(countPositiveEvenNum([3, 5, 7, 9])); // 0
 // console.log(countPositiveEvenNum([1, 2, 3, 4, 5, 6, 7, 8, 9])); // 4
+
+// input: array of numbers
+// output: single number(5)
+// psuedocode:
+// - function takes an input which is array
+// - iterate each array number
+// - if array current number is greater than 0 and current number completely divided by 2
+// then return this number
+// dryrun:
+// - -3 > 0 and -3 % 2 === 0 => false
+// - 5 > 0 and 5 % 2 === 0 => false
+// - 7 > 0 and 7 % 2 === 0 => false
+// - -2 > 0 and -2 % 2 === 0 => false
+// - 9 > 0 and 9 % 2 === 0 => false
+// - 12 > 0 and 12 % 2 === 0 => true(function terminate here)
+function firstPositiveEvenNum(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0 && arr[i] % 2 === 0) return arr[i];
+  }
+}
+
+// console.log(firstPositiveEvenNum([-3, 5, 7, -2, 9, 12, 8, 14])); // 12
+// edgecases
+// console.log(firstPositiveEvenNum([])); // undefined
+// console.log(firstPositiveEvenNum([-2, -9, -4, -7])); // undefined
+// console.log(firstPositiveEvenNum([1, 2, 3])); // 2
