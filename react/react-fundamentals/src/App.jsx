@@ -1,9 +1,9 @@
-import OnSubmit from "./form-controlled-inputs/OnSubmit";
+import FormValidator from "./form-controlled-inputs/FormValidator";
 
 const App = () => {
   return (
     <div>
-      <OnSubmit />
+      <FormValidator />
     </div>
   );
 };
