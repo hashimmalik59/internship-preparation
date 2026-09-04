@@ -354,8 +354,40 @@ function countNumLessThan10(arr) {
   }
   return count;
 }
-console.log(countNumLessThan10([12, 5, 8, 20, 3, 15, 7])); // 4
+// console.log(countNumLessThan10([12, 5, 8, 20, 3, 15, 7])); // 4
 // edgecase
-console.log(countNumLessThan10([])); // 0
-console.log(countNumLessThan10([10, 12, 17, 25])); // 0
-console.log(countNumLessThan10([3, 6, 1, 8, 9])); // 5
+// console.log(countNumLessThan10([])); // 0
+// console.log(countNumLessThan10([10, 12, 17, 25])); // 0
+// console.log(countNumLessThan10([3, 6, 1, 8, 9])); // 5
+
+// input: array of numbers
+// output: single number(3)
+// psuedocode:
+// - function takes an input which is array
+// - variable for count(0)
+// - iterate each array number
+// - if array current number is greater than 10 and array current number is completely divided by 2
+// - than count + 1 and update count
+// - return count
+// dryrun:
+// - 3 > 0 and 3 % 2 === 0 => false => count(0)
+// - 8 > 0 and 8 % 2 === 0 => true => count(0) + 1 = 1
+// - -2 > 0 and -2 % 2 === 0 => false => count(1)
+// - 11 > 0 and 11 % 2 === 0 => false => count(1)
+// - 14 > 0 and 14 % 2 === 0 => true => count(1) + 1 = 2
+// - -6 > 0 and -6 % 2 === 0 => false => count(2)
+// - 7 > 0 and 7 % 2 === 0 => false => count(2)
+// - 20 > 0 and 20 % 2 === 0 => true => count(2) + 1 = 3
+
+function countPositiveEvenNum(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0 && arr[i] % 2 === 0) count++;
+  }
+  return count;
+}
+// console.log(countPositiveEvenNum([3, 8, -2, 11, 14, -6, 7, 20])); // 3
+// console.log(countPositiveEvenNum([])); // 0
+// console.log(countPositiveEvenNum([-2, -5, -1, -9])); // 0
+// console.log(countPositiveEvenNum([3, 5, 7, 9])); // 0
+// console.log(countPositiveEvenNum([1, 2, 3, 4, 5, 6, 7, 8, 9])); // 4
