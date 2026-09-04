@@ -1,9 +1,9 @@
-import ProblemInput from "./mini-project/ProblemInput";
+import Form from "./form-controlled-inputs/Form";
 
 const App = () => {
   return (
     <div>
-      <ProblemInput />
+      <Form />
     </div>
   );
 };
