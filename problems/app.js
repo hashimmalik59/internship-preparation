@@ -444,8 +444,37 @@ function sumOfPosiEvenNums(arr) {
   }
   return sum;
 }
-console.log(sumOfPosiEvenNums([3, 8, -2, 11, 14, -6, 7, 20])); // 42
+// console.log(sumOfPosiEvenNums([3, 8, -2, 11, 14, -6, 7, 20])); // 42
 // edgecase:
 // console.log(sumOfPosiEvenNums([])); // 0
 // console.log(sumOfPosiEvenNums([-2, -4, -6, -8])); // 0
 // console.log(sumOfPosiEvenNums([1, 3, 5, 7])); // 0
+
+// input: array of numbers
+// output: single number(20)
+// psuedocode:
+// - function takes an input which is array
+// - compare variable with wach array num which is arr first number
+// - iterate each array num
+// - if array current num is greater than 0 and array current num is completely divided by 2 also array current number is greater than maxNum
+// - than assign current array num into maxNum
+// - return maxNum
+// dryrun:
+// - 0 > 0 => false => maxNum(0)
+// - -4 > 0 => false => maxNum(0)
+// - 7 > 0 and 7 % 2 === 0 => false => maxNum(0)
+// - 12 > 0 and 12 % 2 === 0 => true => maxNum(12)
+// - -2 > 0 => false => maxNum(12)
+// - 18 > 0 and 18 % 2 === 0 => true => maxNum(18)
+// - 9 > 0 and 9 % 2 === 0 => false => maxNum(18)
+// - 20 > 0 and 20 % 2 === 0 => true => maxNum(20)
+// - 15 > 0 and 15 % 2 === 0 => false => maxNum(20)
+
+function findPositiveEvenLargeNum(arr) {
+  let maxNum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0 && arr[i] % 2 === 0 && arr[i] > maxNum) maxNum = arr[i];
+  }
+  return maxNum;
+}
+console.log(findPositiveEvenLargeNum([-4, 7, 12, -2, 18, 9, 20, 15])); // 20
