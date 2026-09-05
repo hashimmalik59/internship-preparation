@@ -417,3 +417,35 @@ function firstPositiveEvenNum(arr) {
 // console.log(firstPositiveEvenNum([])); // undefined
 // console.log(firstPositiveEvenNum([-2, -9, -4, -7])); // undefined
 // console.log(firstPositiveEvenNum([1, 2, 3])); // 2
+
+// input: array of numbers
+// output: single number(42)
+// psuedocode:
+// - function takes an input which is array
+// - sum varible for addition which is zero at first
+// - iterate array each element
+// - if array current number is greater than 0 and current number is completely divided by 2
+// - than sum + array current number and update sum
+// - return sum
+// dryrun:
+// - 3 > 0 and 3 % 2 === 0 => false => sum(0)
+// - 8 > 0 and 8 % 2 === 0 => true => sum(0) + 8 = 8
+// - -2 > 0 and -2 % 2 === 0 => false => sum(8)
+// - 11 > 0 and 11 % 2 === 0 => false => sum(8)
+// - 14 > 0 and 14 % 2 === 0 => true => sum(8) + 14 = 22
+// - -6 > 0 and -6 % 2 === 0 => false => sum(22)
+// - 7 > 0 and 7 % 2 === 0 => false => sum(22)
+// - 20 > 0 and 20 % 2 === 0 => true => sum(22) + 20 + 42
+
+function sumOfPosiEvenNums(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0 && arr[i] % 2 === 0) sum += arr[i];
+  }
+  return sum;
+}
+console.log(sumOfPosiEvenNums([3, 8, -2, 11, 14, -6, 7, 20])); // 42
+// edgecase:
+// console.log(sumOfPosiEvenNums([])); // 0
+// console.log(sumOfPosiEvenNums([-2, -4, -6, -8])); // 0
+// console.log(sumOfPosiEvenNums([1, 3, 5, 7])); // 0
