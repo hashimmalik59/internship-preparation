@@ -477,4 +477,37 @@ function findPositiveEvenLargeNum(arr) {
   }
   return maxNum;
 }
-console.log(findPositiveEvenLargeNum([-4, 7, 12, -2, 18, 9, 20, 15])); // 20
+// console.log(findPositiveEvenLargeNum([-4, 7, 12, -2, 18, 9, 20, 15])); // 20
+
+// input: array of number
+// output: single number(4)
+// psuedocode:
+// function takes an input which is array
+// count variable which is 0
+// iterate whole array
+// if array current number is greater than 10
+// than count + 1 and update count
+// return count
+// dryrun:
+// 4 > 10 => false => count(0)
+// 12 > 10 => true => count(0) + 1 = 1
+// 7 > 10 => false => count(1)
+// 20 > 10 => true => count(1) + 1 = 2
+// 15 > 10 => true => count(2) + 1 = 3
+// 3 > 10 => false => count(3)
+// 20 > 10 => true => count(3) + 1 = 4
+// 9 > 10 => false => count(4)
+
+function countGreater10Num(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10) count++;
+  }
+  return count;
+}
+// console.log(countGreater10Num([4, 12, 7, 20, 15, 3, 20, 9])); // 4
+
+// edgecases
+// console.log(countGreater10Num([])); // 0
+// console.log(countGreater10Num([1, 2, 3, 4])); // 0
+// console.log(countGreater10Num([11, 20, 15, 30])); // 4
