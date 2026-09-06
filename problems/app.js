@@ -511,3 +511,36 @@ function countGreater10Num(arr) {
 // console.log(countGreater10Num([])); // 0
 // console.log(countGreater10Num([1, 2, 3, 4])); // 0
 // console.log(countGreater10Num([11, 20, 15, 30])); // 4
+
+// input: array of numbers
+// output: single number(3)
+// psuedocode:
+// function takes an input which is array
+// count variable which is 0
+// iterate whole array
+// if array current num is greater than 10 and completely divided by 2
+// than count + 1 and update count
+// return count
+// dryrun:
+// 4 > 10 => false => count(0)
+// 12 > 10 and 12 % 2 === 0 => true => count(0) + 1 = 1
+// 7 > 10 => false => count(1)
+// 20 > 10 and 20 % 2 === 0 => true => count(1) + 1 = 2
+// 15 > 10 and 15 % 2 === 0 => false => count2)
+// 3 > 10 => false => count(2)
+// 18 > 10 and 18 % 2 === 0 => true => count(2) + 1 = 3
+// 9 > 10 => false => count(3)
+
+function greaterThan10AndEvenNums(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10 && arr[i] % 2 === 0) count++;
+  }
+  return count;
+}
+// console.log(greaterThan10AndEvenNums([4, 12, 7, 20, 15, 3, 18, 9])); // 3
+
+// edgecases
+// console.log(greaterThan10AndEvenNums([])); // 0
+// console.log(greaterThan10AndEvenNums([1, 2, 3, 4, 5])); // 0
+// console.log(greaterThan10AndEvenNums([12, 34, 14, 18])); // 4
