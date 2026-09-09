@@ -544,3 +544,100 @@ function greaterThan10AndEvenNums(arr) {
 // console.log(greaterThan10AndEvenNums([])); // 0
 // console.log(greaterThan10AndEvenNums([1, 2, 3, 4, 5])); // 0
 // console.log(greaterThan10AndEvenNums([12, 34, 14, 18])); // 4
+
+// input: array of numbers
+// output: single number(3)
+// psuedocode:
+// function takes an input which is array
+// count variable which is 0
+// iterate whole array
+// if array current num is less than 10 and completey divided by 2
+// than count + 1 and update count
+// return count
+// dryrun:
+// 6 < 10 and 6 % 2 === 0 => true => count(0) + 1 = 1
+// 13 < 10 => count(1)
+// 8 < 10 and 8 % 2 === 0 => true => count(1) + 1 = 2
+// 21 < 10 => false => count(2)
+// 10 < 10 => false => count(2)
+// 17 < 10 => false count(2)
+// 4 < 10 and 4 % 2 === 0 => true => count(2) + 1 = 3
+// 12 < 10 => false => count(3)
+
+function countLessThan10EvenNums(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 10 && arr[i] % 2 === 0) count++;
+  }
+  return count;
+}
+// console.log(countLessThan10EvenNums([6, 13, 8, 21, 10, 17, 4, 12])); // 3
+// console.log(countLessThan10EvenNums([])); // 0
+// console.log(countLessThan10EvenNums([1, 2, 3, 4])); // 2
+// console.log(countLessThan10EvenNums([11, 12, 13, 14])); // 0
+
+// input: array of numbers
+// output: single number(3)
+// psuedocode:
+// function takes an input which is array
+// count variable which is zero
+// iterate whole array
+// if array current number is greater than 10 and not completely divided by 2
+// than count + 1 and update count
+// return count
+// dryrun:
+// 5 > 10 => false => count(0)
+// 13 > 10 => and 13 % 2 !== 0 true => count(0) + 1 = 1
+// 8 > 10 => false => count(1)
+// 17 > 10 => and 17 % 2 !== 0 true => count(1) + 1 = 2
+// 3 > 10 => false => count(2)
+// 21 > 10 and 21 % 2 !== 0 true => count(2) + 1 = 3
+// 10 > 10 => false => count(3)
+// 14 > 10 => false => count(3)
+
+function countGreaterThan10OddNum(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10 && arr[i] % 2 !== 0) count++;
+  }
+  return count;
+}
+// console.log(countGreaterThan10OddNum([5, 13, 8, 17, 3, 21, 10, 14])); // 3
+// console.log(countGreaterThan10OddNum([])); // 0
+// edgecase
+// console.log(countGreaterThan10OddNum([1, 2, 3, 4])); // 0
+// console.log(countGreaterThan10OddNum([11, 13, 15, 17])); // 4
+// console.log(countGreaterThan10OddNum([1, 13, 4, 7, 15])); // 2
+
+// input: array of numbers
+// output: single number(20)
+// psuedocode:
+// function takes an array which is array
+// variable largest even number(0)
+// iterate whole array
+// if array current num is completely divided by 2 and maxEvenNum is less than current num
+// than assign current num into
+// return maxEvenNum
+// dryrun:
+// 7 % 2 === 0 => false => maxEvenNum(7)
+// 7 % 2 === 0 and 7 < 12 => true => maxEvenNum(12)
+// 12 % 2 === 0 and 12 < 5 => false => maxEvenNum(12)
+// 12 % 2 === 0 and 12 < 18 => true => maxEvenNum(18)
+// 18 % 2 === 0 and 18 < 9 => false => maxEvenNum(18)
+// 18 % 2 === 0 and 18 < 14 => false => maxEvenNum(18)
+// 18 % 2 === 0 and 18 < 3 => false => maxEvenNum(18)
+// 18 % 2 === 0 and 18 < 20 => true => maxEvenNum(20)
+
+function findLargestEvenNum(arr) {
+  let maxEvenNum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    // debugger;
+    if (arr[i] % 2 === 0 && maxEvenNum < arr[i]) maxEvenNum = arr[i];
+  }
+  return maxEvenNum;
+}
+// console.log(findLargestEvenNum([7, 12, 5, 18, 9, 14, 3, 20])); // 20
+// edgecases
+// console.log(findLargestEvenNum([])); // 0
+// console.log(findLargestEvenNum([7, 5, 3, 9])); // 0
+// console.log(findLargestEvenNum([7, 12, 5, 18])); // 18
