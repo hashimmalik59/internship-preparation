@@ -34,11 +34,19 @@ const myData = {
   age: 24,
   isStudent: true,
 };
-console.log(myData.name);
-console.log(myData["age"]);
+// console.log(myData.name);
+// console.log(myData["age"]);
 
 // function return
 function sumTwoNums(a, b) {
   return a + b;
 }
-console.log(sumTwoNums(2, 5));
+// console.log(sumTwoNums(2, 5));
+
+// async js
+async function getUser() {
+  const api = await fetch(`https://randomuser.me/api`);
+  const res = await api.json();
+  console.log(res);
+}
+getUser();
