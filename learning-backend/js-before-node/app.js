@@ -7,20 +7,38 @@
 
 const nums = [1, 2, 3, 4, 5];
 
-nums.forEach((num, index) => console.log(`${index}: ${num} Hello`));
+nums.forEach((num, index) => {
+  //   console.log(`${index}: ${num} Hello`);
+});
 
 const updateNums = nums.map((num) => num * 3);
 
-console.log(updateNums);
+// console.log(updateNums);
 
 const newNums = nums.filter((num) => num > 3);
 
-console.log(newNums);
+// console.log(newNums);
 
 const findNum = nums.find((num) => num > 2);
 
-console.log(findNum);
+// console.log(findNum);
 
 const indexNum = nums.indexOf(4);
 
-console.log(indexNum);
+// console.log(indexNum);
+
+// objecy
+
+const myData = {
+  name: "Hashim",
+  age: 24,
+  isStudent: true,
+};
+console.log(myData.name);
+console.log(myData["age"]);
+
+// function return
+function sumTwoNums(a, b) {
+  return a + b;
+}
+console.log(sumTwoNums(2, 5));
