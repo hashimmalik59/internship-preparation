@@ -2,45 +2,55 @@ import express from "express";
 
 const app = express();
 
-app.use(express.json());
+app.use(express.json())
 
 const students = [];
 
 app.post("/students", (req, res) => {
-  students.push(req.body);
+    console.log(req.body);
 
-  res.status(201).json({
-    message: "student data is created successfully",
-  });
+    students.push(req.body);
+
+    res.status(201).json({
+        message: "student created successdully"
+    })
 });
 
 app.get("/students", (req, res) => {
-  res.status(200).json({
-    message: "students data is fetched successfully",
-    students: students,
-  });
-});
+    console.log(req.body);
 
-app.delete("/students/:index", (req, res) => {
-  const index = req.params.index;
+    res.status(200).json({
+        students: students,
+        message: "student get successfully"
+    })
+})
 
-  delete students[index];
+app.delete("/students/:id", (req, res) => {
+    console.log(req.body);
 
-  res.status(200).json({
-    message: "student data is deleted successfully",
-  });
-});
+    const id = req.params.id;
 
-app.patch("/students/:index", (req, res) => {
-  const index = req.params.index;
+    delete students[id];
 
-  const name = req.body.name;
+    res.status(201).json({
+        message: "student deleted successfully"
+    })
+})
 
-  students[index].name = name;
+app.patch("/students/:id", (req, res) => {
+    console.log(req.body);
 
-  res.status(200).json({
-    message: "student data is updated successfully",
-  });
-});
+    const id = req.params.id;
+
+    const name = req.body.name;
+    const age = req.body.age;
+
+    students[id].name = name;
+    students[id].age = age;
+
+    res.status(200).json({
+        message: "student updated successfully"
+    })
+})
 
 export default app;
