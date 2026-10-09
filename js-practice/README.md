@@ -68,11 +68,48 @@ Agar koi output expected output se match nahi karta, to us input ko isolate karo
 - Test cases aur edge cases
 - Debugging
 
-## Completion Checklist
+# Problem #2: Shopping Discount Calculator
 
-- [ ] Invalid input reject hota hai.
-- [ ] Negative amount reject hoti hai.
-- [ ] `0` valid input ke taur par handle hota hai.
-- [ ] `2000` par free shipping milti hai.
-- [ ] `2000` se kam valid amount par delivery fee lagti hai.
-- [ ] Saare test cases run karke verify kiye gaye hain.
+## Problem Statement
+
+An online store offers discounts based on the total amount of a customer's order.
+
+Create a function that receives the order amount and returns the appropriate discount message.
+
+## Requirements
+
+1. The order amount must be a valid, finite, non-negative number.
+2. If the input is invalid or negative, return `"invalid amount"`.
+3. If the amount is **5000 or more**, return `"10% discount"`.
+4. If the amount is **2000 or more, but less than 5000**, return `"5% discount"`.
+5. If the amount is **less than 2000**, return `"no discount"`.
+
+## Examples
+
+|      Input | Expected Output    |
+| ---------: | ------------------ |
+|     `6000` | `"10% discount"`   |
+|     `5000` | `"10% discount"`   |
+|     `3500` | `"5% discount"`    |
+|     `2000` | `"5% discount"`    |
+|     `1500` | `"no discount"`    |
+|        `0` | `"no discount"`    |
+|     `-100` | `"invalid amount"` |
+|  `"hello"` | `"invalid amount"` |
+|      `NaN` | `"invalid amount"` |
+| `Infinity` | `"invalid amount"` |
+
+## Problem-Solving Steps
+
+Follow these steps before and while writing the solution:
+
+1. **Understand:** Explain the problem in your own words.
+2. **Example:** Choose an input and write its expected output.
+3. **Break down:** Identify the conditions and decide the order in which to check them.
+4. **Code:** Write the function yourself.
+5. **Verify:** Run the examples and compare actual outputs with expected outputs.
+6. **Debug:** If an output is wrong, investigate and fix the issue yourself before asking for help.
+
+## Important Reminder
+
+Check invalid inputs first. Then evaluate the discount thresholds in an order that prevents a higher threshold from being missed.
